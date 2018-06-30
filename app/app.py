@@ -1,8 +1,11 @@
 from flask import Flask
+from models import db
 import random
 
 # the all-important app variable:
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://dbuser:password@127.0.0.1:5432/postgres'
+db.init_app(app)
 
 @app.route("/")
 def hello():
