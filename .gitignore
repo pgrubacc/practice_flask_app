@@ -2,4 +2,5 @@ venv/
 logs/
 .idea
 app.db
-*__pycache__/
+__pycache__/
+*.pyc
